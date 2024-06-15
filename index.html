@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Miner Game</title>
+    <title>Crypto Trader Tycoon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="gameContainer">
-        <div id="miner">
-            <h1>Crypto Miner Game</h1>
-            <div id="score">BTC: 0</div>
-            <div id="upgrades">
-                <h2>Upgrades</h2>
-                <button id="upgradeButton">Upgrade Mining Rig (Cost: 10 BTC)</button>
+        <div id="traderSection">
+            <h1>Crypto Trader Tycoon</h1>
+            <div id="sofa">
+                <div id="trader">🧑‍💻</div>
             </div>
         </div>
-        <div id="market">
+        <div id="tradingSection">
             <h2>Market</h2>
-            <button id="exchangeButton">Exchange BTC for NOT (Rate: 10 BTC = 1 NOT)</button>
-            <div id="notScore">NOT: 0</div>
+            <div id="market">
+                <div class="currency">
+                    <span>BTC: </span><span id="btcPrice">50000</span>
+                    <button onclick="trade('buy', 'BTC')">Buy</button>
+                    <button onclick="trade('sell', 'BTC')">Sell</button>
+                </div>
+                <div class="currency">
+                    <span>ETH: </span><span id="ethPrice">3000</span>
+                    <button onclick="trade('buy', 'ETH')">Buy</button>
+                    <button onclick="trade('sell', 'ETH')">Sell</button>
+                </div>
+            </div>
+        </div>
+        <div id="statsSection">
+            <h2>Stats</h2>
+            <div id="stats">
+                <div>Cash: $<span id="cash">10000</span></div>
+                <div>BTC: <span id="btc">0</span></div>
+                <div>ETH: <span id="eth">0</span></div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>

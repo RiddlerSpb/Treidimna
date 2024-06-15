@@ -1,42 +1,49 @@
+let cash = 10000;
 let btc = 0;
-let not = 0;
-let upgradeCost = 10;
-let upgradeMultiplier = 1;
-const exchangeRate = 10;
-const btcPerHour = 1; // Amount of BTC earned per hour
+let eth = 0;
+const btcPrice = 50000;
+const ethPrice = 3000;
 
-function updateDisplay() {
-    document.getElementById('score').innerText = `BTC: ${btc}`;
-    document.getElementById('notScore').innerText = `NOT: ${not}`;
-    document.getElementById('upgradeButton').innerText = `Upgrade Mining Rig (Cost: ${upgradeCost} BTC)`;
+function updateStats() {
+    document.getElementById('cash').innerText = cash;
+    document.getElementById('btc').innerText = btc;
+    document.getElementById('eth').innerText = eth;
 }
 
-function earnBTC() {
-    btc += btcPerHour * upgradeMultiplier;
-    updateDisplay();
+function trade(action, currency) {
+    let price = 0;
+    if (currency === 'BTC') {
+        price = btcPrice;
+    } else if (currency === 'ETH') {
+        price = ethPrice;
+    }
+
+    if (action === 'buy') {
+        if (cash >= price) {
+            cash -= price;
+            if (currency === 'BTC') {
+                btc++;
+            } else if (currency === 'ETH') {
+                eth++;
+            }
+        } else {
+            alert('Not enough cash!');
+        }
+    } else if (action === 'sell') {
+        if (currency === 'BTC' && btc > 0) {
+            cash += price;
+            btc--;
+        } else if (currency === 'ETH' && eth > 0) {
+            cash += price;
+            eth--;
+        } else {
+            alert('Not enough cryptocurrency!');
+        }
+    }
+
+    updateStats();
 }
-
-// Earn BTC every hour (3600000 milliseconds)
-setInterval(earnBTC, 3600000);
-
-// For demonstration purposes, earn BTC every second
-setInterval(earnBTC, 1000);
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    document.getElementById('upgradeButton').addEventListener('click', () => {
-        if (btc >= upgradeCost) {
-            btc -= upgradeCost;
-            upgradeMultiplier++;
-            upgradeCost *= 2;
-            updateDisplay();
-        }
-    });
-
-    document.getElementById('exchangeButton').addEventListener('click', () => {
-        if (btc >= exchangeRate) {
-            btc -= exchangeRate;
-            not++;
-            updateDisplay();
-        }
-    });
+    updateStats();
 });
