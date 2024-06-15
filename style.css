@@ -11,15 +11,27 @@ body {
 }
 
 #gameContainer {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
     background: #444;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#clickButton, #upgradeButton, #exchangeButton {
+#miner, #market {
+    text-align: center;
     background: #555;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    margin: 10px;
+}
+
+#upgradeButton, #exchangeButton {
+    background: #666;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -28,6 +40,6 @@ body {
     border-radius: 5px;
 }
 
-#clickButton:hover, #upgradeButton:hover, #exchangeButton:hover {
-    background: #666;
+#upgradeButton:hover, #exchangeButton:hover {
+    background: #777;
 }
