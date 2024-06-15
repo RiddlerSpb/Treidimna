@@ -20,32 +20,54 @@ h1 {
     color: #333;
 }
 
-.balance {
+.search {
     margin-bottom: 20px;
 }
 
-.assets {
-    text-align: left;
+.search input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-button {
+.search button {
+    padding: 8px 16px;
+    font-size: 16px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
     border-radius: 4px;
 }
 
-button:hover {
+.search button:hover {
     background-color: #0056b3;
+}
+
+.cryptocurrency {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.cryptocurrency h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cryptocurrency .price {
+    font-size: 16px;
+    color: #28a745;
+}
+
+.cryptocurrency .change {
+    font-size: 14px;
+}
+
+.graph {
+    margin-top: 20px;
 }

@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Инвестиционный Клуб</title>
+    <title>Криптовалютный тикер</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Инвестиционный Клуб</h1>
-        <div class="balance" id="balance">Баланс: $10000</div>
-        <div class="assets" id="assets">
-            <h2>Доступные активы:</h2>
-            <ul id="assetList">
-                <li>Акция A - Цена: $100 <button onclick="buyAsset('A', 100)">Купить</button></li>
-                <li>Акция B - Цена: $200 <button onclick="buyAsset('B', 200)">Купить</button></li>
-                <li>Криптовалюта C - Цена: $50 <button onclick="buyAsset('C', 50)">Купить</button></li>
-            </ul>
+        <h1>Криптовалютный тикер</h1>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Поиск криптовалюты...">
+            <button onclick="searchCryptocurrency()">Найти</button>
+        </div>
+        <div class="cryptocurrencies" id="cryptocurrencies">
+            <!-- Сюда будут загружаться данные о криптовалютах -->
         </div>
     </div>
     <script src="script.js"></script>
