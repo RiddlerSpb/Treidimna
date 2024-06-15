@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Криптовалютный тикер</title>
+    <title>Крипто-новостной агрегатор</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Криптовалютный тикер</h1>
-        <div class="search">
-            <input type="text" id="searchInput" placeholder="Поиск криптовалюты...">
-            <button onclick="searchCryptocurrency()">Найти</button>
+        <h1>Крипто-новости</h1>
+        <div class="filter">
+            <label for="categorySelect">Фильтр по теме:</label>
+            <select id="categorySelect" onchange="fetchNews()">
+                <option value="">Все</option>
+                <option value="bitcoin">Bitcoin</option>
+                <option value="ethereum">Ethereum</option>
+                <!-- Добавьте другие категории по мере необходимости -->
+            </select>
         </div>
-        <div class="cryptocurrencies" id="cryptocurrencies">
-            <!-- Сюда будут загружаться данные о криптовалютах -->
+        <div id="newsContainer" class="news-container">
+            <!-- Новости будут загружаться сюда -->
         </div>
     </div>
     <script src="script.js"></script>
