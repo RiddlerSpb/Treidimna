@@ -1,77 +1,51 @@
 body {
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #333;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
+    margin: 0;
 }
 
-#gameContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    background: #444;
+.container {
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-#traderSection, #tradingSection, #statsSection {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background: #555;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    flex: 1;
-    margin: 10px;
 }
 
-#sofa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    background: #666;
-    border-radius: 10px;
-    margin-top: 20px;
-    position: relative;
+h1 {
+    color: #333;
 }
 
-#traderContainer {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.balance {
+    margin-bottom: 20px;
 }
 
-#sofaImage {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: 0;
+.assets {
+    text-align: left;
 }
 
-#traderImage {
-    width: 50%;
-    height: auto;
-    position: absolute;
-    bottom: 20px;
-    left: 25%;
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
 }
 
 button {
-    background: #666;
+    background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px;
-    margin: 5px;
+    padding: 5px 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 button:hover {
-    background: #777;
+    background-color: #0056b3;
 }
