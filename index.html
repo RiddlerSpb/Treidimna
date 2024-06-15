@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicker Game</title>
+    <title>Crypto Clicker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="gameContainer">
-        <h1>Clicker Game</h1>
-        <div id="score">Score: 0</div>
-        <button id="clickButton">Click me!</button>
+        <h1>Crypto Clicker</h1>
+        <div id="score">BTC: 0</div>
+        <button id="clickButton">Mine BTC</button>
         <div id="upgrades">
             <h2>Upgrades</h2>
-            <button id="upgradeButton">Upgrade (Cost: 10)</button>
+            <button id="upgradeButton">Upgrade Mining Rig (Cost: 10 BTC)</button>
+        </div>
+        <div id="market">
+            <h2>Market</h2>
+            <button id="exchangeButton">Exchange BTC for ETH (Rate: 10 BTC = 1 ETH)</button>
+            <div id="ethScore">ETH: 0</div>
         </div>
     </div>
     <script src="script.js"></script>

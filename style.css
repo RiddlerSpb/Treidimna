@@ -18,7 +18,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#clickButton, #upgradeButton {
+#clickButton, #upgradeButton, #exchangeButton {
     background: #555;
     color: #fff;
     border: none;
@@ -28,6 +28,6 @@ body {
     border-radius: 5px;
 }
 
-#clickButton:hover, #upgradeButton:hover {
+#clickButton:hover, #upgradeButton:hover, #exchangeButton:hover {
     background: #666;
 }
